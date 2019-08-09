@@ -1,4 +1,8 @@
-import java.lang.Math;
+import Algorithms.BubbleSort;
+import Algorithms.LinearSearch;
+import Algorithms.MergeSort;
+import Algorithms.SelectionSort;
+
 import java.util.Arrays;
 
 // Creates the algorithm testing program.
@@ -18,7 +22,7 @@ public class AlgoTester{
 		//sort the array: Selection sort
 		long start = System.currentTimeMillis();
 		arr = SelectionSort.sort(arr);
-		System.out.println("Sorting took: " + (System.currentTimeMillis() - start) + "ms");
+		System.out.println("SelectSorting took: " + (System.currentTimeMillis() - start) + "ms");
 		report();
 		
 		System.out.println();
@@ -27,9 +31,16 @@ public class AlgoTester{
 		report();		
 		start = System.currentTimeMillis();
 		arr = BubbleSort.sort(arr);
-		System.out.println("Sorting took: " + (System.currentTimeMillis() - start) + "ms");
+		System.out.println("BubbleSorting took: " + (System.currentTimeMillis() - start) + "ms");
 		report();
-		
+
+		randomize(len);
+		report();
+		start = System.currentTimeMillis();
+		arr = MergeSort.sort(arr);
+		System.out.println("MergeSorting took: " + (System.currentTimeMillis() - start) + "ms");
+		report();
+
 		System.out.println();
 		//Search for a random int
 		int rand = (int) (Math.random() * len);
