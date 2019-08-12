@@ -1,7 +1,7 @@
-import Algorithms.BubbleSort;
-import Algorithms.LinearSearch;
-import Algorithms.MergeSort;
-import Algorithms.SelectionSort;
+import AlgorithmsEasy.BubbleSort;
+import AlgorithmsEasy.LinearSearch;
+import AlgorithmsEasy.SelectionSort;
+import AlgorithmsMedium.MergeSort;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package Algorithms;
+package AlgorithmsEasy;
 
 //Binary search of sorted arrays, repeatedly dividing the array into halfs
 public class BinarySearch {

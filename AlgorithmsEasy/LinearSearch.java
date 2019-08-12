@@ -1,4 +1,4 @@
-package Algorithms;
+package AlgorithmsEasy;
 
 //most primitive of searches, works even with unsorted arrays. Speed purely in O(N).
 public class LinearSearch{

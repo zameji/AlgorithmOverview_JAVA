@@ -1,4 +1,4 @@
-package Algorithms;
+package AlgorithmsEasy;
 
 //Implements the selection sort algorithm. This works in O(N^2) time to sort an array in ascending order.
 public class SelectionSort{

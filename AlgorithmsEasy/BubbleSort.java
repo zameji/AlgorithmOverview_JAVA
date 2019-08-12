@@ -1,4 +1,4 @@
-package Algorithms;
+package AlgorithmsEasy;
 
 //Sort an array using bubble sort
 public class BubbleSort{

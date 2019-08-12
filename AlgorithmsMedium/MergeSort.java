@@ -1,4 +1,4 @@
-package Algorithms;
+package AlgorithmsMedium;
 
 import java.util.Arrays;
 
