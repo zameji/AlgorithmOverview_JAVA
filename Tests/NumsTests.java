@@ -1,16 +1,28 @@
 package Tests;
 
 import AlgorithmsEasy.*;
+import AlgorithmsMedium.MergeSort;
 
 import java.util.LinkedList;
 import java.util.Scanner;
 
 class NumsTests {
+    private static Scanner input = new Scanner(System.in);
 
     static void test() {
-        Scanner input = new Scanner(System.in);
+
         System.out.println("___________\nNUMERIC TESTS");
         System.out.print("Choose test array size: ");
+
+        twoSumTest();
+        reverseIntegerTest();
+        numberPalindromeTest();
+        romanToIntTest();
+        addToLLsTest();
+        mergeTwoSortedLLsTest();
+    }
+
+    private static void twoSumTest() {
         int complexity = input.nextInt();
 
         //fill testarr, make sure unique solution exists
@@ -40,7 +52,6 @@ class NumsTests {
             int[] twoSumResult = TwoSum.getResult(testarr, target);
             if (twoSumResult[0] + twoSumResult[1] == target) {
                 System.out.println("OK");
-                System.out.println("\t\t" + twoSumResult[0] + "+" + twoSumResult[1] + "=" + target);
             } else {
                 System.out.println("ERROR");
                 System.out.println("\t\t" + twoSumResult[0] + "+" + twoSumResult[1] + "=/=" + target);
@@ -48,9 +59,11 @@ class NumsTests {
         } catch (Exception e) {
             System.out.println("ERROR: Array probably poorly initialized");
         }
+    }
 
+    private static void reverseIntegerTest() {
         System.out.print("\tReverse integer ...");
-        testarr = new int[]{0, -321, 44, -14};
+        int[] testarr = new int[]{0, -321, 44, -14};
         int[] checkarr = new int[]{0, -123, 44, -41};
 
         boolean correct = true;
@@ -69,12 +82,15 @@ class NumsTests {
                 System.out.println("\t\t" + testarr[i] + "-->" + ReverseInt.reverse(testarr[i]) + " instead of " + checkarr[i]);
             }
         }
+    }
 
+    private static void numberPalindromeTest() {
         System.out.print("\tNumber palindrome ...");
-        testarr = new int[]{0, -321, 40, 414, 444, 4};
+
+        int[] testarr = new int[]{0, -321, 40, 414, 444, 4};
         boolean[] checkarrBoolean = new boolean[]{true, false, false, true, true, true};
 
-        correct = true;
+        boolean correct = true;
         for (int i = 0; i < testarr.length; i++) {
             if (NumberPalindrome.check(testarr[i]) != checkarrBoolean[i]) {
                 correct = false;
@@ -87,15 +103,17 @@ class NumsTests {
         } else {
             System.out.println("ERROR");
             for (int i = 0; i < testarr.length; i++) {
-                System.out.println("\t\t" + testarr[i] + "-->" + NumberPalindrome.check(testarr[i]) + " instead of " + checkarr[i]);
+                System.out.println("\t\t" + testarr[i] + "-->" + NumberPalindrome.check(testarr[i]) + " instead of " + checkarrBoolean[i]);
             }
         }
+    }
 
+    private static void romanToIntTest() {
         System.out.print("\tRoman to int ...");
         String[] testarrRoman = new String[]{"MCM", "MDCCCXLVIV", "MCMXCI"};
-        checkarr = new int[]{1900, 1849, 1991};
+        int[] checkarr = new int[]{1900, 1849, 1991};
 
-        correct = true;
+        boolean correct = true;
         for (int i = 0; i < testarrRoman.length; i++) {
             if (RomanToInt.convert(testarrRoman[i]) != checkarr[i]) {
                 correct = false;
@@ -108,10 +126,12 @@ class NumsTests {
         } else {
             System.out.println("ERROR");
             for (int i = 0; i < testarrRoman.length; i++) {
-                System.out.println("\t\t" + testarr[i] + "-->" + RomanToInt.convert(testarrRoman[i]) + " instead of " + checkarr[i]);
+                System.out.println("\t\t" + testarrRoman[i] + "-->" + RomanToInt.convert(testarrRoman[i]) + " instead of " + checkarr[i]);
             }
         }
+    }
 
+    private static void addToLLsTest() {
         System.out.print("\tAdd two linked lists ...");
         //Initialize
         String oneLL = Integer.toString((int) (Math.random() * 1000000));
@@ -139,11 +159,69 @@ class NumsTests {
 
         if (sumLL == resultLLInt) {
             System.out.println("OK");
-            System.out.println("\t\t" + oneLL + "+" + twoLL + "=" + sumLL);
         } else {
             System.out.println("ERROR");
             System.out.println("\t\t" + oneLL + "+" + twoLL + "=/=" + resultLLInt + " CORRECT: " + sumLL);
         }
+    }
+
+    private static void mergeTwoSortedLLsTest() {
+        System.out.print("\tMerge two sorted linked lists ...");
+        LinkedList<Integer> oneLLList = new LinkedList<>();
+        LinkedList<Integer> twoLLList = new LinkedList<>();
+        LinkedList<Integer> resultLLLinkedList = new LinkedList<>();
+        boolean correct;
+
+        //randomize testarr2
+        int[] testarr = new int[(int) (Math.random() * 1000)];
+        for (int i = 0; i < testarr.length; i++) {
+            int rand = (int) (Math.random() * testarr.length);
+            testarr[i] = rand;
+        }
+        testarr = MergeSort.sort(testarr);
+        for (int i : testarr) {
+            oneLLList.add(i);
+        }
+
+        //randomize testarr2
+        int[] testarr2 = new int[(int) (Math.random() * 1000)];
+        for (int i = 0; i < testarr2.length; i++) {
+            int rand = (int) (Math.random() * testarr.length);
+            testarr2[i] = rand;
+        }
+        testarr2 = MergeSort.sort(testarr2);
+        for (int i : testarr2) {
+            twoLLList.add(i);
+        }
+
+        //merge testarr + testarr2
+        int[] mergearr = new int[testarr.length + testarr2.length];
+        System.arraycopy(testarr, 0, mergearr, 0, testarr.length);
+        System.arraycopy(testarr2, 0, mergearr, 0 + testarr.length, testarr2.length);
+
+        mergearr = MergeSort.sort(mergearr);
+
+        resultLLLinkedList = MergeSortedLinkedLists.merge(oneLLList, twoLLList);
+        correct = true;
+        if (resultLLLinkedList.size() != mergearr.length) {
+            correct = false;
+        } else {
+            for (int i = 0; i < mergearr.length; i++) {
+                if (mergearr[i] != resultLLLinkedList.peekFirst()) {
+                    correct = false;
+                    break;
+                } else {
+                    resultLLLinkedList.pop();
+                }
+            }
+        }
+
+        if (correct) {
+            System.out.println("OK");
+        } else {
+            System.out.println("ERROR");
+        }
+
 
     }
 
