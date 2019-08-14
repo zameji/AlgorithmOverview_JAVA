@@ -7,7 +7,7 @@ public class TwoSum {
 
     // We are using a HashMap to keep track of the values that we tried. The advantage of storing
     // them in HashMap is that we have constant time access due to the hashing
-    public static int[] getResult(int[] arr, int target) throws Exception {
+    public static int[] getResult(int[] arr, int target) {
         HashMap<Integer, Boolean> vals = new HashMap<>(arr.length);
         int[] result = new int[2];
         for (int val : arr) {
@@ -21,6 +21,7 @@ public class TwoSum {
 
         }
 
-        throw new Exception("The test array is probably bad.");
+        return result;
+
     }
 }

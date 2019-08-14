@@ -1,7 +1,7 @@
 package AlgorithmsEasy;
 
 //Sort an array using bubble sort
-public class BubbleSort{
+public class BubbleSort {
 
     public static int[] sort(int[] arr) {
 
