@@ -1,5 +1,11 @@
 package AlgorithmsEasy;
 
+/**
+ * Finds the longest prefix that is shared by all strings in an array
+ *
+ * @ param input non-empty array with strings
+ * @ returns the longest found shared prefix
+ */
 public class LongestCommonPrefix {
 
     public static String get(String[] input) {

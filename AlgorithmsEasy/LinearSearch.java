@@ -1,6 +1,12 @@
 package AlgorithmsEasy;
 
-//most primitive of searches, works even with unsorted arrays. Speed purely in O(N).
+/**
+ * Finds an item in an array.
+ *
+ * @ param arr an array of integers
+ * @ param key an item to be found
+ * @ returns the index where the key was; if not found returns -1
+ */
 public class LinearSearch {
 
     public static int search(int[] arr, int key) {

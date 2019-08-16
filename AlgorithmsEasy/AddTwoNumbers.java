@@ -2,10 +2,23 @@ package AlgorithmsEasy;
 
 import java.util.LinkedList;
 
-//Take two numbers, represented by linked lists digit-by-digit (from the smallest decimal)
-//Sum them up, return result as a LinkedList (backwards)
+/**
+ * Takes two numbers, represented by linked lists digit-by-digit (from the smallest decimal)
+ * Sums them up, returns result as a LinkedList (backwards).
+ *
+ * @ param  first    the first number to add
+ * @ param  second   the second number to add
+ * @ param  base          allows specifying the base (optional, bases <= 10 supported)
+ * @ return             first+second
+ */
+//
 public class AddTwoNumbers {
+
     public static LinkedList<Integer> add(LinkedList first, LinkedList second) {
+        return add(first, second, 10);
+    }
+
+    public static LinkedList<Integer> add(LinkedList first, LinkedList second, int BASE) {
 
         // We will go digit by digit, summing them up
         int carry = 0; //to carry over a decimal
@@ -17,8 +30,8 @@ public class AddTwoNumbers {
             int one = (first.size() > 0) ? (int) first.pop() : 0;
             int two = (second.size() > 0) ? (int) second.pop() : 0;
             int sum = one + two + carry;
-            carry = sum / 10;
-            sum %= 10;
+            carry = sum / BASE;
+            sum %= BASE;
 
             result.add(sum);
         }

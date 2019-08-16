@@ -1,25 +1,35 @@
 package AlgorithmsEasy;
 
+/**
+ * Increment a number represented as a list of digits
+ *
+ * @ param  num     the number to increment
+ * @ param  base   the number system (allows binary to decimal numbers)
+ * @ return         the incremented number
+ */
 public class addOne {
 
-    public static int[] add(int[] arr) {
+    public static int[] add(int[] num) {
+        return add(num, 10);
+    }
+
+    public static int[] add(int[] num, int BASE) {
 
         int carry = 1;
-        int i = arr.length - 1;
+        int i = num.length - 1;
         while (carry > 0 && i >= 0) {
-            arr[i] += carry;
-            carry = arr[i] / 10;
-            arr[i] %= 10;
+            num[i] += carry;
+            carry = num[i] / BASE;
+            num[i] %= BASE;
             i--;
         }
 
         if (carry > 0) {
-            int[] arr_n = new int[arr.length + 1];
-            System.arraycopy(arr, 0, arr_n, 1, arr.length);
-            arr_n[0] = carry;
-            return arr_n;
-        } else return arr;
-
+            int[] numLarger = new int[num.length + 1];
+            System.arraycopy(num, 0, numLarger, 1, num.length);
+            numLarger[0] = carry;
+            return numLarger;
+        } else return num;
 
     }
 

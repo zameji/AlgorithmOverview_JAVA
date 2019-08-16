@@ -2,7 +2,13 @@ package AlgorithmsEasy;
 
 import java.util.HashMap;
 
-//Given and array and a target, find two values in the array that produce the desired sum and return them
+/**
+ * Given and array and a target, find two values in the array that produce the desired sum and return them
+ *
+ * @ param arr an array of numbers which contains exactly one pair that will produce a desired sum
+ * @ param target the desired sum of two elements
+ * @ returns two elements that produce the desired sum
+ */
 public class TwoSum {
 
     // We are using a HashMap to keep track of the values that we tried. The advantage of storing

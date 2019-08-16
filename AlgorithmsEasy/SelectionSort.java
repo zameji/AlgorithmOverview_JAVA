@@ -1,6 +1,12 @@
 package AlgorithmsEasy;
 
-//Implements the selection sort algorithm. This works in O(N^2) time to sort an array in ascending order.
+/**
+ * Implements the selection sort algorithm
+ *
+ * @ param arr a non-empty array of ints
+ * @ param desc whether the order should be descending, default = false
+ * @ returns the sorted array
+ */
 public class SelectionSort {
 
     public static int[] sort(int[] arr) {
@@ -8,7 +14,6 @@ public class SelectionSort {
     }
 
     private static int[] sort(int[] arr, boolean desc) {
-
 
         if (desc) {
             int n = arr.length;

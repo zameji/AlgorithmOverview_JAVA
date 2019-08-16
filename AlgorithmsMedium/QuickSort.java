@@ -1,5 +1,11 @@
 package AlgorithmsMedium;
 
+/**
+ * Sort an array by the quick sort algorithm
+ *
+ * @ param arr a non-empty integer array
+ * @ returs sorts the array in place
+ */
 public class QuickSort {
 
     public static void sort(int[] arr) {
@@ -21,7 +27,7 @@ public class QuickSort {
 
     }
 
-    private static int partition(int arr[], int low, int high) {
+    private static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = (low - 1); // index of smaller element
         for (int j = low; j < high; j++) {

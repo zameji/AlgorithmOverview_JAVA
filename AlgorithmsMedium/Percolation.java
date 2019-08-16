@@ -1,5 +1,11 @@
 package AlgorithmsMedium;
 
+/**
+ * A percolation simulation framework
+ *
+ * @ param side the size of the simulation matrix (its side length)
+ * @ returns an estimate of the percolation threshold
+ */
 public class Percolation {
 
     private static final int IMAGINARY_TOP_UNIT = 1;

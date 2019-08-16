@@ -1,6 +1,12 @@
 package AlgorithmsEasy;
 
-//take two strings representing a binary number, return their sum as string
+/**
+ * Sum two binary numbers represented as a string
+ *
+ * @ param  one first binary number
+ * @ param  two second binary number
+ * @ return     string representation of one+two
+ */
 public class addBinary {
 
     public static String add(String one, String two) {
@@ -10,7 +16,6 @@ public class addBinary {
         int carry = 0;
         int i = one.length() - 1;
         int j = two.length() - 1;
-
 
         while (i >= 0 || j >= 0 || carry == 1) {
             carry += (i >= 0 ? one.charAt(i--) - '0' : 0);

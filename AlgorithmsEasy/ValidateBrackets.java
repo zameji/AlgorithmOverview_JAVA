@@ -1,5 +1,11 @@
 package AlgorithmsEasy;
 
+/**
+ * Validates the bracket nesting
+ *
+ * @ param input a string of brackets - ()[]{}, no other characters allowed
+ * @ returns true if the strings are nested correctly
+ */
 public class ValidateBrackets {
 
     public static boolean validate(String input) {

@@ -2,6 +2,12 @@ package AlgorithmsMedium;
 
 import java.util.HashMap;
 
+/**
+ * Find longest substring without the repetition of a characters
+ *
+ * @ param input a string of characters
+ * @ returns the length of the longest substring without repetitions
+ */
 public class LongestUniqueSubstring {
 
     public static int find(String input) {
@@ -23,7 +29,6 @@ public class LongestUniqueSubstring {
                 output = input.substring(start, end + 1);
             }
             seen.put(current, end);
-
         }
 
         return output.length();

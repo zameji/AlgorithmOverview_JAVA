@@ -1,6 +1,11 @@
 package AlgorithmsEasy;
 
-//Sort an array using bubble sort
+/**
+ * Sort an integer array using the bubble sort algorithm
+ *
+ * @ param  arr array of integers to be sorted
+ * @ returns    sorted array (ascending order)
+ */
 public class BubbleSort {
 
     public static int[] sort(int[] arr) {
@@ -9,7 +14,7 @@ public class BubbleSort {
         boolean swapped;
         int boundary = arr.length - 1;
 
-        // do-while to make sure at least one iteration
+        // do-while to make sure at least one iteration occurs
         do {
             swapped = false;
             for (int i = 0; i < boundary; i++) {

@@ -2,7 +2,12 @@ package AlgorithmsMedium;
 
 import java.util.Arrays;
 
-//Recursive merge sort, own implementation
+/**
+ * Sorting by the merge sort algorithm (fast)
+ *
+ * @ param arr an array of integers
+ * @ returns the sorted array
+ */
 public class MergeSort {
 
     public static int[] sort(int[] arr) {

@@ -1,5 +1,12 @@
 package AlgorithmsMedium;
 
+/**
+ * Find the median of two sorted arrays
+ *
+ * @ param A a non-empty sorted array
+ * @ param B a different non-empty sorted array
+ * @ returns the median value of the two arrays combined*
+ */
 public class MedianOfTwoSortedArrays {
 
     public static double find(int[] A, int[] B) {
@@ -29,7 +36,7 @@ public class MedianOfTwoSortedArrays {
             } else if (i > indexMin && A[i - 1] > B[j]) {
                 indexMax = i - 1;
             } else {
-                int maxLeft = 0;
+                int maxLeft;
                 if (i == 0) {
                     maxLeft = B[j - 1];
                 } else if (j == 0) {
@@ -39,7 +46,7 @@ public class MedianOfTwoSortedArrays {
                 }
                 if ((m + n) % 2 == 1) return maxLeft;
 
-                int minRight = 0;
+                int minRight;
                 if (i == m) {
                     minRight = B[j];
                 } else if (j == n) {
