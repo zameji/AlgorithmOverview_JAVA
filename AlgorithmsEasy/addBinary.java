@@ -1,14 +1,14 @@
 package AlgorithmsEasy;
 
-/**
- * Sum two binary numbers represented as a string
- *
- * @ param  one first binary number
- * @ param  two second binary number
- * @ return     string representation of one+two
- */
-public class addBinary {
 
+public class addBinary {
+    /**
+     * Sum two binary numbers represented as a string
+     *
+     * @param one first binary number
+     * @param two second binary number
+     * @return string representation of one+two
+     */
     public static String add(String one, String two) {
 
         StringBuilder result = new StringBuilder();

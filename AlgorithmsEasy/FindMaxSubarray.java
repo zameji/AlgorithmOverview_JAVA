@@ -1,12 +1,13 @@
 package AlgorithmsEasy;
 
-/**
- * Finds the subarray of an array that has the largest sum
- * @ param arr integer array with length > 0 in which the maximum sum should be found
- * @ returns the highest found contiguous sum
- */
-public class FindMaxSubarray {
 
+public class FindMaxSubarray {
+    /**
+     * Finds the subarray of an array that has the largest sum
+     *
+     * @param arr integer array with length > 0 in which the maximum sum should be found
+     * @return the highest found contiguous sum
+     */
     public static int findSum(int[] arr) {
 
         int max = Integer.MIN_VALUE; // Other initializations may fail if all elements in array negative, change to Integer.MIN_VALUE?

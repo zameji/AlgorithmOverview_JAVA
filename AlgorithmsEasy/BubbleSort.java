@@ -1,13 +1,13 @@
 package AlgorithmsEasy;
 
-/**
- * Sort an integer array using the bubble sort algorithm
- *
- * @ param  arr array of integers to be sorted
- * @ returns    sorted array (ascending order)
- */
-public class BubbleSort {
 
+public class BubbleSort {
+    /**
+     * Sort an integer array using the bubble sort algorithm
+     *
+     * @param arr array of integers to be sorted
+     * @return sorted array (ascending order)
+     */
     public static int[] sort(int[] arr) {
 
         //keep track if swap occured + end of unsorted array

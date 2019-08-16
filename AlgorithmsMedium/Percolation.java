@@ -1,11 +1,5 @@
 package AlgorithmsMedium;
 
-/**
- * A percolation simulation framework
- *
- * @ param side the size of the simulation matrix (its side length)
- * @ returns an estimate of the percolation threshold
- */
 public class Percolation {
 
     private static final int IMAGINARY_TOP_UNIT = 1;
@@ -50,10 +44,13 @@ public class Percolation {
         return (openSum) / (double) (SIZE * SIZE);
     }
 
-    public static double simulate() {
-        return simulate(10);
-    }
 
+    /**
+     * A percolation simulation framework
+     *
+     * @param side the size of the simulation matrix (its side length)
+     * @return an estimate of the percolation threshold
+     */
     public static double simulate(int side) {
         initialize(side);
         boolean percolates = false;
@@ -64,6 +61,10 @@ public class Percolation {
         }
         //report();
         return getThreshold();
+    }
+
+    public static double simulate() {
+        return simulate(10);
     }
 
     private static void openRandom() {

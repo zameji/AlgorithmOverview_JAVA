@@ -1,19 +1,17 @@
 package AlgorithmsEasy;
 
-/**
- * Increment a number represented as a list of digits
- *
- * @ param  num     the number to increment
- * @ param  base   the number system (allows binary to decimal numbers)
- * @ return         the incremented number
- */
+
 public class addOne {
 
-    public static int[] add(int[] num) {
-        return add(num, 10);
-    }
-
-    public static int[] add(int[] num, int BASE) {
+    /**
+     * Increment a number represented as a list of digits
+     *
+     * @param num  the number to increment
+     * @param base the number system (allows binary to decimal numbers)
+     * @return the incremented number
+     */
+    public static int[] add(int[] num, int base) {
+        final int BASE = base;
 
         int carry = 1;
         int i = num.length - 1;
@@ -31,6 +29,10 @@ public class addOne {
             return numLarger;
         } else return num;
 
+    }
+
+    public static int[] add(int[] num) {
+        return add(num, 10);
     }
 
 }

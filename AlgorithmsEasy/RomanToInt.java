@@ -1,15 +1,15 @@
 package AlgorithmsEasy;
 
-/**
- * Parses a roman numeral returns its value as integer
- * Notation should use IV for 4, XL for 40, XC for 90, CD for 400 and CM for 900. Other subtractions are not allowed.
- * (i.e. 49 is XLVIV and not IL)
- *
- * @ param roman the roman notation,
- * @ returns the corresponding integer or 0 for empty strings
- */
-public class RomanToInt {
 
+public class RomanToInt {
+    /**
+     * Parses a roman numeral returns its value as integer
+     * Notation should use IV for 4, XL for 40, XC for 90, CD for 400 and CM for 900. Other subtractions are not allowed.
+     * (i.e. 49 is XLVIV and not IL)
+     *
+     * @param roman the roman notation,
+     * @return the corresponding integer or 0 for empty strings
+     */
     public static int convert(String roman) {
         if (roman.length() == 0) return 0;
         if (roman.length() == 1) {

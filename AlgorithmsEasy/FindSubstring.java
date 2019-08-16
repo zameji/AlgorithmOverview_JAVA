@@ -1,15 +1,14 @@
 package AlgorithmsEasy;
 
-/**
- * Finds the position in a string where a given substring begins
- *
- * @ param s the base string
- * @ param sub the sought substring
- * @ returns starting position of substring; if not found returns -1
- */
 
 public class FindSubstring {
-
+    /**
+     * Finds the position in a string where a given substring begins
+     *
+     * @param s   the base string
+     * @param sub the sought substring
+     * @return starting position of substring; if not found returns -1
+     */
     public static int find(String s, String sub) {
         if (sub.length() == 0) return 0;
 

@@ -1,13 +1,13 @@
 package AlgorithmsEasy;
 
-/**
- * Sorts an array using the insertion sort algorithm
- *
- * @ param arr an array to sort
- * @ returns the sorted array in ascending order
- */
-public class InsertionSort {
 
+public class InsertionSort {
+    /**
+     * Sorts an array using the insertion sort algorithm
+     *
+     * @param arr an array to sort
+     * @return the sorted array in ascending order
+     */
     public static int[] sort(int[] arr) {
         int temp;
         for (int i = 1; i < arr.length; i++) {

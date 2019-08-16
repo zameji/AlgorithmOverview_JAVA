@@ -1,13 +1,13 @@
 package AlgorithmsEasy;
 
-/**
- * Validates the bracket nesting
- *
- * @ param input a string of brackets - ()[]{}, no other characters allowed
- * @ returns true if the strings are nested correctly
- */
-public class ValidateBrackets {
 
+public class ValidateBrackets {
+    /**
+     * Validates the bracket nesting
+     *
+     * @param input a string of brackets - ()[]{}, no other characters allowed
+     * @return true if the strings are nested correctly
+     */
     public static boolean validate(String input) {
         if (input.length() > 2) {
             switch (input.charAt(0)) {

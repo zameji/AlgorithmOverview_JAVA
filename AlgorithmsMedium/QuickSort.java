@@ -1,13 +1,13 @@
 package AlgorithmsMedium;
 
-/**
- * Sort an array by the quick sort algorithm
- *
- * @ param arr a non-empty integer array
- * @ returs sorts the array in place
- */
 public class QuickSort {
 
+    /**
+     * Sort an array by the quick sort algorithm
+     * Sorts the array in place
+     *
+     * @param arr a non-empty integer array
+     */
     public static void sort(int[] arr) {
         sort(arr, 0, arr.length - 1);
     }

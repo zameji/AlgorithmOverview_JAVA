@@ -1,13 +1,13 @@
 package AlgorithmsEasy;
 
-/**
- * Checks whether a string is a palindrome
- *
- * @ param candidate a string to be checked
- * @ returns true if string is a palindrome or has length 0
- */
-public class PalindromeCheck {
 
+public class PalindromeCheck {
+    /**
+     * Checks whether a string is a palindrome
+     *
+     * @param candidate a string to be checked
+     * @return true if string is a palindrome or has length 0
+     */
     public static boolean check(String candidate) {
         if (candidate.length() == 0 || candidate.length() == 1) {
             return true;

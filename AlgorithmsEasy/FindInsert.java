@@ -1,14 +1,14 @@
 package AlgorithmsEasy;
 
-/**
- * Find index at which a number should be inserted into an array
- *
- * @ param  arr sorted array to insert into
- * @ param  insert integer to insert
- * @ returns index to insert the number to keep formatting (would require pushing all numbers with a higher index)
- */
-public class FindInsert {
 
+public class FindInsert {
+    /**
+     * Find index at which a number should be inserted into an array
+     *
+     * @param arr    sorted array to insert into
+     * @param insert integer to insert
+     * @return index to insert the number to keep formatting (would require pushing all numbers with a higher index)
+     */
     public static int find(int[] arr, int insert) {
         return find(arr, insert, 0, arr.length);
     }

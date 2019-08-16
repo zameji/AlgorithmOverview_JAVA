@@ -2,15 +2,15 @@ package AlgorithmsEasy;
 
 import java.util.LinkedList;
 
-/**
- * Merges two linked lists into one
- *
- * @ param one a sorted non-empty linked list
- * @ param two a different sorted non-empty linked list
- * @ returns the combination of the two lists, sorted
- */
-public class MergeSortedLinkedLists {
 
+public class MergeSortedLinkedLists {
+    /**
+     * Merges two linked lists into one
+     *
+     * @param one a sorted non-empty linked list
+     * @param two a different sorted non-empty linked list
+     * @return the combination of the two lists, sorted
+     */
     public static LinkedList<Integer> merge(LinkedList one, LinkedList two) {
 
         LinkedList<Integer> result = new LinkedList<>();

@@ -1,14 +1,14 @@
 package AlgorithmsMedium;
 
-/**
- * Find the median of two sorted arrays
- *
- * @ param A a non-empty sorted array
- * @ param B a different non-empty sorted array
- * @ returns the median value of the two arrays combined*
- */
-public class MedianOfTwoSortedArrays {
 
+public class MedianOfTwoSortedArrays {
+    /**
+     * Find the median of two sorted arrays
+     *
+     * @param A a non-empty sorted array
+     * @param B a different non-empty sorted array
+     * @return the median value of the two arrays combined*
+     */
     public static double find(int[] A, int[] B) {
         int m = A.length;
         int n = B.length;

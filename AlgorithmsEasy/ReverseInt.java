@@ -1,13 +1,13 @@
 package AlgorithmsEasy;
 
-/**
- * Returns an integer read backwards
- *
- * @ param i integer with base 10
- * @ returns the integer read backwards, negation sign stays in place (-25 is returned as -52)
- */
-public class ReverseInt {
 
+public class ReverseInt {
+    /**
+     * Returns an integer read backwards
+     *
+     * @param i integer with base 10
+     * @return the integer read backwards, negation sign stays in place (-25 is returned as -52)
+     */
     public static int reverse(int i) {
         long result = 0;
 

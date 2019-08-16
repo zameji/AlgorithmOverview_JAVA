@@ -2,14 +2,14 @@ package AlgorithmsMedium;
 
 import java.util.HashMap;
 
-/**
- * Find longest substring without the repetition of a characters
- *
- * @ param input a string of characters
- * @ returns the length of the longest substring without repetitions
- */
-public class LongestUniqueSubstring {
 
+public class LongestUniqueSubstring {
+    /**
+     * Find longest substring without the repetition of a characters
+     *
+     * @param input a string of characters
+     * @return the length of the longest substring without repetitions
+     */
     public static int find(String input) {
         HashMap<Character, Integer> seen = new HashMap<>();
 

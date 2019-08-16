@@ -1,18 +1,15 @@
 package AlgorithmsEasy;
 
-/**
- * Implements the selection sort algorithm
- *
- * @ param arr a non-empty array of ints
- * @ param desc whether the order should be descending, default = false
- * @ returns the sorted array
- */
+
 public class SelectionSort {
 
-    public static int[] sort(int[] arr) {
-        return sort(arr, false);
-    }
-
+    /**
+     * Implements the selection sort algorithm
+     *
+     * @param arr  a non-empty array of ints
+     * @param desc whether the order should be descending, default = false
+     * @return the sorted array
+     */
     private static int[] sort(int[] arr, boolean desc) {
 
         if (desc) {
@@ -52,4 +49,9 @@ public class SelectionSort {
         }
         return arr;
     }
+
+    public static int[] sort(int[] arr) {
+        return sort(arr, false);
+    }
+
 }

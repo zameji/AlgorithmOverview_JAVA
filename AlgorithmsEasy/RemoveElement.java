@@ -1,14 +1,14 @@
 package AlgorithmsEasy;
 
-/**
- * Prepares the removal of an element in place
- *
- * @ param arr an array
- * @ param del the integer to remove from the array
- * @ returns length of array without the given element, moves the element to the end of the array
- */
-public class RemoveElement {
 
+public class RemoveElement {
+    /**
+     * Prepares the removal of an element in place
+     *
+     * @param arr an array
+     * @param del the integer to remove from the array
+     * @return length of array without the given element, moves the element to the end of the array
+     */
     public static int remove(int[] arr, int del) {
         int len = arr.length;
         int i = 0;
